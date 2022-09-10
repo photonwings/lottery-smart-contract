@@ -163,7 +163,7 @@ contract Lottery is VRFConsumerBaseV2, KeeperCompatibleInterface {
     bool hasBalance = (address(this).balance > 0);
     // Mentioning of type is not needed as it is mentioned in return statement
     upkeepNeeded = (isOpen && isTimePassed && hasPlayers && hasBalance);
-    return (upkeepNeeded, '0x0');
+    return (upkeepNeeded, '0x');
   }
 
   /**
